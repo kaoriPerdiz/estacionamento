@@ -16,10 +16,10 @@ public class Main {
 		int opcao;
 		
 		do {
-			System.out.println("Selecione uma opção:");
-			System.out.println("1 - adicionar veículo");
-			System.out.println("2 - saída de um veículo");
-			System.out.println("3 - listagem de veículos estacionados");
+			System.out.println("Selecione uma opÃ§Ã£o:");
+			System.out.println("1 - adicionar veÃ­culo");
+			System.out.println("2 - saÃ­da de um veÃ­culo");
+			System.out.println("3 - listagem de veÃ­culos estacionados");
 			System.out.println("4 - sair");
 			opcao = sc.nextInt();
 			sc.nextLine();
@@ -42,31 +42,31 @@ public class Main {
 					Pessoa p = new Pessoa(cpf, nome, tel);
 					
 					while(!(tipo.equals("CARRO")) && !(tipo.equals("MOTO"))) {
-						System.out.println("Qual o tipo do veículo? Carro ou moto?");
+						System.out.println("Qual o tipo do veÃ­culo? Carro ou moto?");
 						tipo = sc.nextLine().toUpperCase();
 					}
 					
-					System.out.println("Qual o modelo do veículo?");
+					System.out.println("Qual o modelo do veÃ­culo?");
 					modelo = sc.nextLine();
-					System.out.println("Qual a placa do veículo?");
+					System.out.println("Qual a placa do veÃ­culo?");
 					placa = sc.nextLine();
 					
 					if(tipo == "CARRO") {
 						if(estacionamento.entraVeiculo(placa, modelo, Tipo.CARRO, p)) {
-							System.out.println("Incluído com sucesso!\n");
+							System.out.println("IncluÃ­do com sucesso!");
 						}else {
 							System.out.println("Erro!\n");
 						}
 					}else {
 						if(estacionamento.entraVeiculo(placa, modelo, Tipo.MOTO, p)) {
-							System.out.println("Incluído com sucesso!\n");
+							System.out.println("IncluÃ­do com sucesso!");
 						}else {
-							System.out.println("Erro!\n");
+							System.out.println("Erro!");
 						}
 					}
 				break;
 				case 2:
-					System.out.println("Informe a placa do veículo a ser retirado:");
+					System.out.println("Informe a placa do veÃ­culo a ser retirado:");
 					placa = sc.nextLine();
 					System.out.printf("Total a ser pago: %.2f", estacionamento.saiVeiculo(placa), "\n");
 				break;
